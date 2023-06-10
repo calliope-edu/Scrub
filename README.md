@@ -33,7 +33,10 @@ https://apps.apple.com/us/app/scrub-web-browser/id1569777095
 - Game Controller with Key Mapping
 
 ## Special Thanks
-The first implementation of Scratch Link function is inspired by [toio Do](https://toio.io/special/do/) iPad app. Special thanks to toio Do team!
+
+This Scrub is an application developed by [Mr. Shinichiro Oba](https://github.com/bricklife).
+In consideration of the educational situation in Japan, he decided to transition Scrub from his personal account to the TFabWorks account.
+We express our respect for his dedication to education.
 
 Scratch is a project of the Scratch Foundation, in collaboration with the Lifelong Kindergarten Group at the MIT Media Lab. It is available for free at https://scratch.mit.edu.
 Other names of products are trademarks or registered trademarks of their respective companies.
