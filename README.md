@@ -35,7 +35,7 @@ https://apps.apple.com/us/app/scrub-web-browser/id1569777095
 ## Special Thanks
 
 This Scrub is an application developed by [Mr. Shinichiro Oba](https://github.com/bricklife).
-In consideration of the educational situation in Japan, he decided to transition Scrub from his personal account to the TFabWorks account.
+In consideration of the educational situation in Japan, he decided to transfer Scrub from his personal account to the TFabWorks account.
 We express our respect for his dedication to education.
 
 Scratch is a project of the Scratch Foundation, in collaboration with the Lifelong Kindergarten Group at the MIT Media Lab. It is available for free at https://scratch.mit.edu.
