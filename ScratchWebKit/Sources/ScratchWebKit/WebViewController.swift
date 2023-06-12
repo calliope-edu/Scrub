@@ -33,6 +33,7 @@ public class WebViewController: UIViewController {
         configuration.dataDetectorTypes = []
         
         configuration.preferences.javaScriptCanOpenWindowsAutomatically = true
+        configuration.applicationNameForUserAgent = "Scrub"
         
         self.webView = WKWebView(frame: .zero, configuration: configuration)
         
