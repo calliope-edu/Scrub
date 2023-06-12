@@ -16,6 +16,11 @@ extension URL {
             ".scratch-wiki.info",
             ".scratchfoundation.org",
             ".scratchjr.org",
+            ".xcratch.github.io",
+            ".stretch3.github.io",
+            ".399.jp",
+            ".akadako.com",
+            ".tfabworks.com",
         ]
         return scratchHosts.contains(where: normalizedHost.hasSuffix(_:))
     }
