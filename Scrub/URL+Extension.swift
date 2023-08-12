@@ -21,6 +21,7 @@ extension URL {
             ".399.jp",
             ".akadako.com",
             ".tfabworks.com",
+            ".viscuit.com",
         ]
         return scratchHosts.contains(where: normalizedHost.hasSuffix(_:))
     }
