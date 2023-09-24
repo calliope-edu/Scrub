@@ -19,6 +19,7 @@ extension URL {
             ".xcratch.github.io",
             ".stretch3.github.io",
             ".399.jp",
+            ".699.jp",
             ".akadako.com",
             ".tfabworks.com",
             ".viscuit.com",
