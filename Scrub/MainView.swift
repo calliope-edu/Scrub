@@ -38,7 +38,7 @@ struct MainView: View {
                 .edgesIgnoringSafeArea([.bottom, .horizontal])
             
             MainToolBar(viewModel: viewModel, alertController: alertController)
-                .padding(4)
+                .padding(8)
                 .edgesIgnoringSafeArea([.horizontal])
 #endif
         }

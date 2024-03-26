@@ -32,31 +32,6 @@ struct PreferencesView: View {
                 } label: {
                     CheckmarkText(title: Text("Scratch - Editor (Create New Project)"), checked: preferences.home == .scratchEditor)
                 }
-                Button {
-                    closeKeyboard()
-                    preferences.home = .scratchMyStuff
-                } label: {
-                    CheckmarkText(title: Text("Scratch - My Stuff"), checked: preferences.home == .scratchMyStuff)
-                }
-                Button {
-                    closeKeyboard()
-                    preferences.home = .customUrl
-                } label: {
-                    VStack {
-                        CheckmarkText(title: Text("Custom URL"), checked: preferences.home == .customUrl)
-                        URLTextField(text: $preferences.customUrl, disabled: preferences.isCustomUrlLocked, onEditingChanged: { isEditing in
-                            if isEditing {
-                                preferences.home = .customUrl
-                            }
-                        })
-                    }
-                }
-                Button {
-                    closeKeyboard()
-                    preferences.home = .documentsFolder
-                } label: {
-                    CheckmarkText(title: Text("Local Documents Folder"), checked: preferences.home == .documentsFolder)
-                }
             }.disabled(preferences.isHomeLocked)
             
             // Support

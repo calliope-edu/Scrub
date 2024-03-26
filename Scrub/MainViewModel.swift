@@ -52,11 +52,11 @@ class MainViewModel: ObservableObject {
     var homeUrl: URL? {
         switch preferences.home {
         case .scratchHome:
-            return URL(string: "https://scratch.mit.edu/")
+            return URL(string: "https://microbit-more.github.io/")
         case .scratchEditor:
-            return URL(string: "https://scratch.mit.edu/projects/editor/")
+            return URL(string: "https://microbit-more.github.io/editor/")
         case .scratchMyStuff:
-            return URL(string: "https://scratch.mit.edu/mystuff/")
+            return URL(string: "https://microbit-more.github.io/mystuff/")
         case .customUrl:
             guard let url = URL(string: preferences.customUrl), url.isHTTPsURL else {
                 return nil
