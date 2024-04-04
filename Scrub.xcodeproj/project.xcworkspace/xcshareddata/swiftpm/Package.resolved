@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "NordicDFU",
+        "repositoryURL": "https://github.com/NordicSemiconductor/IOS-DFU-Library",
+        "state": {
+          "branch": null,
+          "revision": "c0c7d01d23422c96aa25d0ea00f9e824d20f7d16",
+          "version": "4.15.0"
+        }
+      },
+      {
         "package": "SFUserFriendlySymbols",
         "repositoryURL": "https://github.com/littleossa/SFUserFriendlySymbols",
         "state": {
@@ -17,6 +26,15 @@
           "branch": null,
           "revision": "cca423ff03ab657062f3781847e65a867b51bb01",
           "version": "0.0.3"
+        }
+      },
+      {
+        "package": "ZIPFoundation",
+        "repositoryURL": "https://github.com/weichsel/ZIPFoundation",
+        "state": {
+          "branch": null,
+          "revision": "b979e8b52c7ae7f3f39fa0182e738e9e7257eb78",
+          "version": "0.9.18"
         }
       }
     ]
