@@ -11,36 +11,68 @@ struct PreferencesView: View {
     
     @EnvironmentObject private var preferences: Preferences
     
+    private var isCentered: Bool = false
+    
     var body: some View {
         Form {
-            // Home
+            
+            // Calliope mini Info
             Section(header: HStack {
-                Label("Home", systemImage: "house")
-                if preferences.isHomeLocked {
-                    LockImage()
-                }
+                Label("Programmiere deinen Calliope mini mit Scratch!", systemImage: "")
             }.font(.headline)) {
+                VStack(spacing: 20) {
+                    Label("Verbinde deinen Calliope mini mit dem iPad (dafür benötigst du die Calliope mini App).", image: "num_01")
+            
+                    Image(decorative: "green_matrix")
+                        .resizable() // Make the image resizable
+                        .dynamicTypeSize(.xSmall)
+                        .frame(width: 60, height: 60)
+                        .aspectRatio(contentMode: .fit)
+                    
+                    Label("Übertrage das Scratch Startprogramm, um deinen Calliope mini programmierbar zu machen.", image: "num_02")
+                    
+                    Button("Upload") {
+                        // some code
+                        return
+                    }
+                    .frame(width: 200 , height: 60)
+                    .font(.title)
+                    .foregroundColor(.white)
+                    .background(Color(red: 0.273, green: 0.873, blue: 0.432))
+                    .cornerRadius(10)
+                    
+                    Label("Nun kannst du mit der Calliope mini Blocks App auf den calliope mini programmieren.", image: "num_03")
+                }.padding(10)
+            }.disabled(preferences.isHomeLocked)
+            
+            
+            // Home
+            Section() {
                 Button {
                     closeKeyboard()
                     preferences.home = .scratchHome
                 } label: {
-                    CheckmarkText(title: Text("Scratch - Home"), checked: preferences.home == .scratchHome)
+                    CheckmarkText(title: Text("Start"), checked: preferences.home == .scratchHome)
                 }
                 Button {
                     closeKeyboard()
                     preferences.home = .scratchEditor
                 } label: {
-                    CheckmarkText(title: Text("Scratch - Editor (Create New Project)"), checked: preferences.home == .scratchEditor)
+                    CheckmarkText(title: Text("Neues Projekt"), checked: preferences.home == .scratchEditor)
+                }
+                Button {
+                    closeKeyboard()
+                    preferences.home = .scratchEditor
+                } label: {
+                    CheckmarkText(title: Text("Eigene URL"), checked: preferences.home == .scratchEditor)
+                }
+                Button {
+                    closeKeyboard()
+                    preferences.home = .scratchEditor
+                } label: {
+                    CheckmarkText(title: Text("Speicherort auswählen"), checked: preferences.home == .scratchEditor)
                 }
             }.disabled(preferences.isHomeLocked)
-            
-            // Support
-            Section(header: HStack {
-                Label("Support", systemImage: "message")
-            }.font(.headline)) {
-                WebLink(title: Text("GitHub"), destination: URL(string: "https://github.com/tfabworks/Scrub")!)
-                WebLink(title: Text("Twitter: @TFabWorks"), destination: URL(string: "https://twitter.com/TFabWorks")!)
-            }
             
             // Version
             Section {

@@ -8,7 +8,6 @@
 import Foundation
 import Combine
 import AsyncAlgorithms
-
 @MainActor
 class WebViewModel: ObservableObject {
     
