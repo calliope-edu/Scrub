@@ -15,25 +15,31 @@ struct PreferencesView: View {
     
     var body: some View {
         Form {
-            
             // Calliope mini Info
             Section(header: HStack {
-                Label("Programmiere deinen Calliope mini mit Scratch!", systemImage: "")
+                Label("Programmiere deinen Calliope mini mit Scratch!", systemImage: "info.circle.fill")
             }.font(.headline)) {
                 VStack(spacing: 20) {
                     Label("Verbinde deinen Calliope mini mit dem iPad (dafür benötigst du die Calliope mini App).", image: "num_01")
             
-                    Image(decorative: "green_matrix")
-                        .resizable() // Make the image resizable
-                        .dynamicTypeSize(.xSmall)
-                        .frame(width: 60, height: 60)
-                        .aspectRatio(contentMode: .fit)
+                    Button(action: {
+                        if let url = URL(string: "https://apps.apple.com/de/app/calliope-mini/id1309545545") {
+                            UIApplication.shared.open(url)
+                        }
+                    }) {
+                        Image(decorative: "green_matrix")
+                            .resizable()
+                            .dynamicTypeSize(.xSmall)
+                            .frame(width: 60, height: 60)
+                            .aspectRatio(contentMode: .fit)
+                    }
                     
                     Label("Übertrage das Scratch Startprogramm, um deinen Calliope mini programmierbar zu machen.", image: "num_02")
                     
                     Button("Upload") {
-                        // some code
-                        return
+                        if let url = URL(string: "https://apps.apple.com/de/app/calliope-mini/id1309545545") {
+                            UIApplication.shared.open(url)
+                        }
                     }
                     .frame(width: 200 , height: 60)
                     .font(.title)
@@ -41,13 +47,20 @@ struct PreferencesView: View {
                     .background(Color(red: 0.273, green: 0.873, blue: 0.432))
                     .cornerRadius(10)
                     
-                    Label("Nun kannst du mit der Calliope mini Blocks App auf den calliope mini programmieren.", image: "num_03")
-                }.padding(10)
+                    Label("Nun kannst du mit der Calliope mini Blocks App auf den Calliope mini programmieren.", image: "num_03")
+                    Image(decorative: "app_icon")
+                        .resizable()
+                        .dynamicTypeSize(.xSmall)
+                        .frame(width: 120  , height: 120)
+                        .aspectRatio(contentMode: .fit)
+                }.padding(10).buttonStyle(BorderlessButtonStyle())
             }.disabled(preferences.isHomeLocked)
             
             
             // Home
-            Section() {
+            Section(header: HStack {
+                Label("Home", systemImage: "house")
+            }.font(.headline)) {
                 Button {
                     closeKeyboard()
                     preferences.home = .scratchHome
@@ -58,19 +71,26 @@ struct PreferencesView: View {
                     closeKeyboard()
                     preferences.home = .scratchEditor
                 } label: {
-                    CheckmarkText(title: Text("Neues Projekt"), checked: preferences.home == .scratchEditor)
+                    CheckmarkText(title: Text("Editor (Erstelle neues Projekt)"), checked: preferences.home == .scratchEditor)
                 }
                 Button {
                     closeKeyboard()
-                    preferences.home = .scratchEditor
+                    preferences.home = .customUrl
                 } label: {
-                    CheckmarkText(title: Text("Eigene URL"), checked: preferences.home == .scratchEditor)
+                    VStack {
+                        CheckmarkText(title: Text("Eigne URL"), checked: preferences.home == .customUrl)
+                        URLTextField(text: $preferences.customUrl, disabled: preferences.isCustomUrlLocked, onEditingChanged: { isEditing in
+                            if isEditing {
+                                preferences.home = .customUrl
+                            }
+                        })
+                    }
                 }
                 Button {
                     closeKeyboard()
-                    preferences.home = .scratchEditor
+                    preferences.home = .documentsFolder
                 } label: {
-                    CheckmarkText(title: Text("Speicherort auswählen"), checked: preferences.home == .scratchEditor)
+                    CheckmarkText(title: Text("Speicherort auswählen"), checked: preferences.home == .documentsFolder)
                 }
             }.disabled(preferences.isHomeLocked)
             
