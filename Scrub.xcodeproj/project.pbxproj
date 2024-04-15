@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		60CAC4BD2BBEA18F00B7E070 /* SFUserFriendlySymbols in Frameworks */ = {isa = PBXBuildFile; productRef = 60CAC4BC2BBEA18F00B7E070 /* SFUserFriendlySymbols */; };
-		60CAC4C02BBEA1E800B7E070 /* NordicDFU in Frameworks */ = {isa = PBXBuildFile; productRef = 60CAC4BF2BBEA1E800B7E070 /* NordicDFU */; };
+		603FD0A32BCD494E004CFF32 /* NordicDFU in Frameworks */ = {isa = PBXBuildFile; productRef = 603FD0A22BCD494E004CFF32 /* NordicDFU */; };
+		603FD0A62BCD4960004CFF32 /* AsyncAlgorithms in Frameworks */ = {isa = PBXBuildFile; productRef = 603FD0A52BCD4960004CFF32 /* AsyncAlgorithms */; };
+		603FD0A92BCD4970004CFF32 /* SFUserFriendlySymbols in Frameworks */ = {isa = PBXBuildFile; productRef = 603FD0A82BCD4970004CFF32 /* SFUserFriendlySymbols */; };
 		CB0A07732629E4D4001EF560 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0A07722629E4D4001EF560 /* Preferences.swift */; };
 		CB0A0777262DC19C001EF560 /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0A0776262DC19C001EF560 /* PreferencesView.swift */; };
 		CB0DA92528FB7BC900BAE912 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0DA92428FB7BC900BAE912 /* MainViewModel.swift */; };
-		CB0DA94928FC0E5900BAE912 /* AsyncAlgorithms in Frameworks */ = {isa = PBXBuildFile; productRef = CB0DA94828FC0E5900BAE912 /* AsyncAlgorithms */; };
 		CB0DA94B28FC249A00BAE912 /* MainToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0DA94A28FC249A00BAE912 /* MainToolBar.swift */; };
 		CB1980C5265CEBF900FC9D3D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CB1980C3265CEBF900FC9D3D /* InfoPlist.strings */; };
 		CB19B7F428FAE92400C3C9A2 /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB19B7F328FAE92400C3C9A2 /* URL+Extension.swift */; };
@@ -91,9 +91,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB713FED27749B2A009C63E8 /* ScratchWebKit in Frameworks */,
-				CB0DA94928FC0E5900BAE912 /* AsyncAlgorithms in Frameworks */,
-				60CAC4BD2BBEA18F00B7E070 /* SFUserFriendlySymbols in Frameworks */,
-				60CAC4C02BBEA1E800B7E070 /* NordicDFU in Frameworks */,
+				603FD0A32BCD494E004CFF32 /* NordicDFU in Frameworks */,
+				603FD0A62BCD4960004CFF32 /* AsyncAlgorithms in Frameworks */,
+				603FD0A92BCD4970004CFF32 /* SFUserFriendlySymbols in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,9 +187,9 @@
 			name = Scrub;
 			packageProductDependencies = (
 				CB713FEC27749B2A009C63E8 /* ScratchWebKit */,
-				CB0DA94828FC0E5900BAE912 /* AsyncAlgorithms */,
-				60CAC4BC2BBEA18F00B7E070 /* SFUserFriendlySymbols */,
-				60CAC4BF2BBEA1E800B7E070 /* NordicDFU */,
+				603FD0A22BCD494E004CFF32 /* NordicDFU */,
+				603FD0A52BCD4960004CFF32 /* AsyncAlgorithms */,
+				603FD0A82BCD4970004CFF32 /* SFUserFriendlySymbols */,
 			);
 			productName = Scrub;
 			productReference = CB3FBCEC2605D98B008FE5C2 /* Scrub.app */;
@@ -224,9 +224,9 @@
 			);
 			mainGroup = CB3FBCE32605D98B008FE5C2;
 			packageReferences = (
-				CB0DA94728FC0E5900BAE912 /* XCRemoteSwiftPackageReference "swift-async-algorithms" */,
-				60CAC4BB2BBEA18F00B7E070 /* XCRemoteSwiftPackageReference "SFUserFriendlySymbols" */,
-				60CAC4BE2BBEA1E800B7E070 /* XCRemoteSwiftPackageReference "IOS-DFU-Library" */,
+				603FD0A12BCD494E004CFF32 /* XCRemoteSwiftPackageReference "IOS-DFU-Library" */,
+				603FD0A42BCD4960004CFF32 /* XCRemoteSwiftPackageReference "swift-async-algorithms" */,
+				603FD0A72BCD4970004CFF32 /* XCRemoteSwiftPackageReference "SFUserFriendlySymbols" */,
 			);
 			productRefGroup = CB3FBCED2605D98B008FE5C2 /* Products */;
 			projectDirPath = "";
@@ -459,6 +459,7 @@
 				DEVELOPMENT_TEAM = GKA87N33H4;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				INFOPLIST_FILE = Scrub/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Calliope mini Blocks";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -488,6 +489,7 @@
 				DEVELOPMENT_TEAM = GKA87N33H4;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				INFOPLIST_FILE = Scrub/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Calliope mini Blocks";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -528,7 +530,23 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		60CAC4BB2BBEA18F00B7E070 /* XCRemoteSwiftPackageReference "SFUserFriendlySymbols" */ = {
+		603FD0A12BCD494E004CFF32 /* XCRemoteSwiftPackageReference "IOS-DFU-Library" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/NordicSemiconductor/IOS-DFU-Library";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.15.2;
+			};
+		};
+		603FD0A42BCD4960004CFF32 /* XCRemoteSwiftPackageReference "swift-async-algorithms" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-async-algorithms.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		603FD0A72BCD4970004CFF32 /* XCRemoteSwiftPackageReference "SFUserFriendlySymbols" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/littleossa/SFUserFriendlySymbols";
 			requirement = {
@@ -536,39 +554,23 @@
 				minimumVersion = 0.4.0;
 			};
 		};
-		60CAC4BE2BBEA1E800B7E070 /* XCRemoteSwiftPackageReference "IOS-DFU-Library" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/NordicSemiconductor/IOS-DFU-Library";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.15.0;
-			};
-		};
-		CB0DA94728FC0E5900BAE912 /* XCRemoteSwiftPackageReference "swift-async-algorithms" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/apple/swift-async-algorithms/";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.0.3;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		60CAC4BC2BBEA18F00B7E070 /* SFUserFriendlySymbols */ = {
+		603FD0A22BCD494E004CFF32 /* NordicDFU */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 60CAC4BB2BBEA18F00B7E070 /* XCRemoteSwiftPackageReference "SFUserFriendlySymbols" */;
-			productName = SFUserFriendlySymbols;
-		};
-		60CAC4BF2BBEA1E800B7E070 /* NordicDFU */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 60CAC4BE2BBEA1E800B7E070 /* XCRemoteSwiftPackageReference "IOS-DFU-Library" */;
+			package = 603FD0A12BCD494E004CFF32 /* XCRemoteSwiftPackageReference "IOS-DFU-Library" */;
 			productName = NordicDFU;
 		};
-		CB0DA94828FC0E5900BAE912 /* AsyncAlgorithms */ = {
+		603FD0A52BCD4960004CFF32 /* AsyncAlgorithms */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CB0DA94728FC0E5900BAE912 /* XCRemoteSwiftPackageReference "swift-async-algorithms" */;
+			package = 603FD0A42BCD4960004CFF32 /* XCRemoteSwiftPackageReference "swift-async-algorithms" */;
 			productName = AsyncAlgorithms;
+		};
+		603FD0A82BCD4970004CFF32 /* SFUserFriendlySymbols */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 603FD0A72BCD4970004CFF32 /* XCRemoteSwiftPackageReference "SFUserFriendlySymbols" */;
+			productName = SFUserFriendlySymbols;
 		};
 		CB713FEC27749B2A009C63E8 /* ScratchWebKit */ = {
 			isa = XCSwiftPackageProductDependency;

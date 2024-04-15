@@ -20,8 +20,14 @@ struct PreferencesView: View {
                 Label("Programmiere deinen Calliope mini mit Scratch!", systemImage: "info.circle.fill")
             }.font(.headline)) {
                 VStack(spacing: 20) {
-                    Label("Verbinde deinen Calliope mini mit dem iPad (dafür benötigst du die Calliope mini App).", image: "num_01")
-            
+                    Label {
+                        Text("Verbinde deinen Calliope mini mit dem iPad (dafür benötigst du die Calliope mini App).")
+                    } icon: {
+                        Image("num_01")
+                            .resizable()
+                            .frame(width: 30  , height: 30)
+                    }
+                    
                     Button(action: {
                         if let url = URL(string: "https://apps.apple.com/de/app/calliope-mini/id1309545545") {
                             UIApplication.shared.open(url)
@@ -34,7 +40,13 @@ struct PreferencesView: View {
                             .aspectRatio(contentMode: .fit)
                     }
                     
-                    Label("Übertrage das Scratch Startprogramm, um deinen Calliope mini programmierbar zu machen.", image: "num_02")
+                    Label {
+                        Text("Übertrage das Scratch Startprogramm, um deinen Calliope mini programmierbar zu machen.")
+                    } icon: {
+                        Image("num_02")
+                            .resizable()
+                            .frame(width: 30  , height: 30)
+                    }
                     
                     Button("Upload") {
                         if let url = URL(string: "https://apps.apple.com/de/app/calliope-mini/id1309545545") {
@@ -47,8 +59,14 @@ struct PreferencesView: View {
                     .background(Color(red: 0.273, green: 0.873, blue: 0.432))
                     .cornerRadius(10)
                     
-                    Label("Nun kannst du mit der Calliope mini Blocks App auf den Calliope mini programmieren.", image: "num_03")
-                    Image(decorative: "app_icon")
+                    Label {
+                        Text("Nun kannst du mit der Calliope mini Blocks App auf den Calliope mini programmieren.")
+                    } icon: {
+                        Image("num_03")
+                            .resizable()
+                            .frame(width: 30  , height: 30)
+                    }
+                    Image(decorative: "app_icon_transparent")
                         .resizable()
                         .dynamicTypeSize(.xSmall)
                         .frame(width: 120  , height: 120)

@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "num_06.pdf",
+      "filename" : "Icon_bg_transparent.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -17,8 +17,5 @@
   "info" : {
     "author" : "xcode",
     "version" : 1
-  },
-  "properties" : {
-    "preserves-vector-representation" : true
   }
 }

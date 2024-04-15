@@ -6,8 +6,8 @@
         "repositoryURL": "https://github.com/NordicSemiconductor/IOS-DFU-Library",
         "state": {
           "branch": null,
-          "revision": "c0c7d01d23422c96aa25d0ea00f9e824d20f7d16",
-          "version": "4.15.0"
+          "revision": "46401ee8527843a2bdaf87dfb0fd14bb295aab07",
+          "version": "4.15.2"
         }
       },
       {
@@ -20,12 +20,21 @@
         }
       },
       {
-        "package": "AsyncAlgorithms",
-        "repositoryURL": "https://github.com/apple/swift-async-algorithms/",
+        "package": "swift-async-algorithms",
+        "repositoryURL": "https://github.com/apple/swift-async-algorithms.git",
         "state": {
           "branch": null,
-          "revision": "cca423ff03ab657062f3781847e65a867b51bb01",
-          "version": "0.0.3"
+          "revision": "da4e36f86544cdf733a40d59b3a2267e3a7bbf36",
+          "version": "1.0.0"
+        }
+      },
+      {
+        "package": "swift-collections",
+        "repositoryURL": "https://github.com/apple/swift-collections.git",
+        "state": {
+          "branch": null,
+          "revision": "94cf62b3ba8d4bed62680a282d4c25f9c63c2efb",
+          "version": "1.1.0"
         }
       },
       {
