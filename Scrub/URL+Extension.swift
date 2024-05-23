@@ -23,6 +23,7 @@ extension URL {
             ".akadako.com",
             ".tfabworks.com",
             ".viscuit.com",
+            ".calliope-edu.github.io"
         ]
         return scratchHosts.contains(where: normalizedHost.hasSuffix(_:))
     }

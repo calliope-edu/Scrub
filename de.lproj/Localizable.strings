@@ -1,0 +1,32 @@
+/* 
+  Localizable.strings
+  Scrub
+
+  Created by itestra on 30.04.24.
+  
+*/
+
+"Settings" = "Einstellungen";
+"Before you get started:" = "Bevor du startest:";
+"Home" = "Home";
+"Licenses and Sources" = "Lizenzen und Quellen";
+
+"Prepare your Calliope mini so that you can program it with Scratch. You will also need the Calliope mini app." = "Bereite deinen Calliope mini so vor, dass du ihn mit Scratch programmieren kannst. Du benötigst zusätzlich die Calliope mini App.";
+
+"Open the **Calliope mini app** on your iPad." = "Öffne die **Calliope mini App** auf deinem iPad.";
+
+"**Connect** your Calliope mini to the iPad." = "**Verbinde** deinen Calliope mini mit dem iPad.";
+
+"Transfer the **Scratch start program** from the Calliope mini app to your Calliope mini." = "Übertrage das **Scratch Startprogramm** aus der Calliope mini App auf deinen Calliope mini.";
+
+"Select the Calliope mini Blocks Editor under Editors and Programmes." = "Wähle dazu den Calliope mini Blocks Editor unter Editoren und Programme.";
+
+"A **5-digit name** appears on the LED matrix. You can use this name to select your Calliope mini in the **Calliope mini Blocks Editor**." = "Es erscheint ein **5-stelliger Name** auf der LED-Matrix. Über diesen Namen kannst du deinen Calliope mini in der **Calliope mini Blocks App** auswählen.";
+
+"Open the **Calliope mini Blocks app** and **connect** your Calliope mini. You are now ready to start programming your Calliope mini with Scratch!" = "Starte die **Calliope mini Blocks App** und **verbinde** deinen Calliope mini. Jetzt kannst du loslegen und deinen Calliope mini mit Scratch programmieren!";
+
+"Watch the video!" = "Video ansehen!";
+"Start" = "Start";
+"Editor (Create new project)"  = "Editor (Erstelle neues Projekt)";
+"Own URL" = "Eigene URL";
+"Choose storage location" = "Speicherort auswählen";

@@ -14,7 +14,7 @@ struct MainToolBar: View {
     @ObservedObject var alertController: AlertController
     
     var body: some View {
-        VStack(spacing: 8) {
+        VStack(spacing: 12) {
             let canShareUrl = viewModel.url?.isHTTPsURL == true
             
             MenuButton("Share", symbol: .squareAndArrowUp) {

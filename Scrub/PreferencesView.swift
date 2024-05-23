@@ -17,61 +17,107 @@ struct PreferencesView: View {
         Form {
             // Calliope mini Info
             Section(header: HStack {
-                Label("Programmiere deinen Calliope mini mit Scratch!", systemImage: "info.circle.fill")
+                Text("Before you get started:")
             }.font(.headline)) {
-                VStack(spacing: 20) {
+                VStack(alignment: .leading, spacing: 25 ) {
+                    Text("Prepare your Calliope mini so that you can program it with Scratch. You will also need the Calliope mini app.")
+                    
+                    // 1. Bullet Point
                     Label {
-                        Text("Verbinde deinen Calliope mini mit dem iPad (dafür benötigst du die Calliope mini App).")
+                        Text("Open the **Calliope mini app** on your iPad.")
                     } icon: {
                         Image("num_01")
                             .resizable()
                             .frame(width: 30  , height: 30)
                     }
-                    
-                    Button(action: {
-                        if let url = URL(string: "https://apps.apple.com/de/app/calliope-mini/id1309545545") {
-                            UIApplication.shared.open(url)
-                        }
-                    }) {
-                        Image(decorative: "green_matrix")
-                            .resizable()
-                            .dynamicTypeSize(.xSmall)
-                            .frame(width: 60, height: 60)
-                            .aspectRatio(contentMode: .fit)
-                    }
-                    
+            
+                    HStack(alignment: .center) {
+                        Button(action: {
+                            if let url = URL(string: "https://apps.apple.com/de/app/calliope-mini/id1309545545") {
+                                UIApplication.shared.open(url)
+                            }
+                        }) {
+                            Image(decorative: "step_1")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 450)
+                        }.multilineTextAlignment(.center)
+                    }.frame(maxWidth: .infinity)
+                
+                    // 2. Bullet Point
                     Label {
-                        Text("Übertrage das Scratch Startprogramm, um deinen Calliope mini programmierbar zu machen.")
+                        Text("**Connect** your Calliope mini to the iPad.")
                     } icon: {
                         Image("num_02")
                             .resizable()
                             .frame(width: 30  , height: 30)
                     }
+                    HStack(alignment: .center) {
+                        Image(decorative: "step_2")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 450)
+                    }.frame(maxWidth: .infinity)
                     
-                    Button("Upload") {
-                        if let url = URL(string: "https://apps.apple.com/de/app/calliope-mini/id1309545545") {
-                            UIApplication.shared.open(url)
-                        }
-                    }
-                    .frame(width: 200 , height: 60)
-                    .font(.title)
-                    .foregroundColor(.white)
-                    .background(Color(red: 0.273, green: 0.873, blue: 0.432))
-                    .cornerRadius(10)
-                    
+                    // 3. Bullet Point
                     Label {
-                        Text("Nun kannst du mit der Calliope mini Blocks App auf den Calliope mini programmieren.")
+                        VStack() {
+                            Text("Transfer the **Scratch start program** from the Calliope mini app to your Calliope mini.")
+                            HStack(alignment: .center) {
+                                Image(decorative: "step_3")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: 400)
+                            }.frame(maxWidth: .infinity)
+                            Text("Select the Calliope mini Blocks Editor under Editors and Programmes.")
+                        }
                     } icon: {
                         Image("num_03")
                             .resizable()
                             .frame(width: 30  , height: 30)
                     }
-                    Image(decorative: "app_icon_transparent")
-                        .resizable()
-                        .dynamicTypeSize(.xSmall)
-                        .frame(width: 120  , height: 120)
-                        .aspectRatio(contentMode: .fit)
-                }.padding(10).buttonStyle(BorderlessButtonStyle())
+                
+                    // 4. Bullet point
+                    Label {
+                        Text("A **5-digit name** appears on the LED matrix. You can use this name to select your Calliope mini in the **Calliope mini Blocks Editor**.")
+                    } icon: {
+                        Image("num_04")
+                            .resizable()
+                            .frame(width: 30  , height: 30)
+                    }
+                    HStack(alignment: .center) {
+                        Image(decorative: "step_4")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 450)
+                    }.frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
+                    
+                    // 5. Bullet point
+                    Label {
+                        Text("Open the **Calliope mini Blocks app** and **connect** your Calliope mini. You are now ready to start programming your Calliope mini with Scratch!")
+                    } icon: {
+                        Image("num_05")
+                            .resizable()
+                            .frame(width: 30  , height: 30)
+                    }
+                    HStack(alignment: .center) {
+                        Image(decorative: "step_5")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 450)
+                    }.frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
+                    HStack(alignment: .center) {
+                        Button(action: {
+                            if let url = URL(string: "https://calliope.cc/en/coding/editors/calliope-mini-blocks-scratch-coding") {
+                                UIApplication.shared.open(url)
+                            }
+                        }) {
+                            Text("Watch the video!").foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                        }
+                    }.frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
+                    
+                    
+                }.padding(10).buttonStyle(BorderlessButtonStyle()).padding(.horizontal, 20)
             }.disabled(preferences.isHomeLocked)
             
             
@@ -89,14 +135,14 @@ struct PreferencesView: View {
                     closeKeyboard()
                     preferences.home = .scratchEditor
                 } label: {
-                    CheckmarkText(title: Text("Editor (Erstelle neues Projekt)"), checked: preferences.home == .scratchEditor)
+                    CheckmarkText(title: Text("Editor (Create new project)"), checked: preferences.home == .scratchEditor)
                 }
                 Button {
                     closeKeyboard()
                     preferences.home = .customUrl
                 } label: {
                     VStack {
-                        CheckmarkText(title: Text("Eigne URL"), checked: preferences.home == .customUrl)
+                        CheckmarkText(title: Text("Own URL"), checked: preferences.home == .customUrl)
                         URLTextField(text: $preferences.customUrl, disabled: preferences.isCustomUrlLocked, onEditingChanged: { isEditing in
                             if isEditing {
                                 preferences.home = .customUrl
@@ -108,9 +154,24 @@ struct PreferencesView: View {
                     closeKeyboard()
                     preferences.home = .documentsFolder
                 } label: {
-                    CheckmarkText(title: Text("Speicherort auswählen"), checked: preferences.home == .documentsFolder)
+                    CheckmarkText(title: Text("Choose storage location"), checked: preferences.home == .documentsFolder)
                 }
             }.disabled(preferences.isHomeLocked)
+            
+            Section(header: HStack {
+                Label("Licenses and Sources", systemImage: "newspaper")
+            }.font(.headline)) {
+                HStack {
+                    Text("Scrub")
+                    Spacer()
+                    Text("Copyright \u{00A9} 2021, Shinichiro Oba")
+                }
+                HStack {
+                    Text("GitHub Repository")
+                    Spacer()
+                    Link("calliope-edu", destination: URL(string: "https://github.com/calliope-edu/Scrub")!)
+                }
+            }
             
             // Version
             Section {

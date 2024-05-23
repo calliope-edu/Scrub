@@ -38,14 +38,18 @@ struct MainView: View {
                 .edgesIgnoringSafeArea([.bottom, .horizontal])
             
             MainToolBar(viewModel: viewModel, alertController: alertController)
-                .padding(8)
+                .padding(12)
                 .edgesIgnoringSafeArea([.horizontal])
 #endif
         }
+        .background {
+                Color.white
+                        .ignoresSafeArea()
+                }
         .sheet(isPresented: $viewModel.isShowingPreferences) {
             NavigationView {
                 PreferencesView()
-                    .navigationTitle(Text("Preferences"))
+                    .navigationTitle(Text("Settings"))
                     .toolbar {
                         ToolbarItem(placement: .navigationBarTrailing) {
                             Button("Done") {
