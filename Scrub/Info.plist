@@ -86,5 +86,92 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UTImportedTypeDeclarations</key>
+	<array>
+		<dict>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>public.data</string>
+				<string>public.composite-content</string>
+				<string>public.zip-archive</string>
+			</array>
+			<key>UTTypeDescription</key>
+			<string>Scratch 3 Sprite</string>
+			<key>UTTypeIdentifier</key>
+			<string>org.scratch.sprite3</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>sprite3</string>
+				</array>
+				<key>public.mime-type</key>
+				<array>
+					<string>application/zip</string>
+					<string>application/x-scratch-sprite3</string>
+				</array>
+			</dict>
+		</dict>
+		<dict>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>public.data</string>
+				<string>public.composite-content</string>
+			</array>
+			<key>UTTypeDescription</key>
+			<string>Scratch 2 Sprite</string>
+			<key>UTTypeIdentifier</key>
+			<string>org.scratch.sprite2</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>sprite2</string>
+				</array>
+			</dict>
+		</dict>
+		<dict>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>public.data</string>
+				<string>public.composite-content</string>
+				<string>public.zip-archive</string>
+			</array>
+			<key>UTTypeDescription</key>
+			<string>Scratch 3 Project</string>
+			<key>UTTypeIdentifier</key>
+			<string>org.scratch.sb3</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>sb3</string>
+				</array>
+				<key>public.mime-type</key>
+				<array>
+					<string>application/zip</string>
+					<string>application/x-scratch-project</string>
+				</array>
+			</dict>
+		</dict>
+		<dict>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>public.data</string>
+				<string>public.composite-content</string>
+			</array>
+			<key>UTTypeDescription</key>
+			<string>Scratch 2 Project</string>
+			<key>UTTypeIdentifier</key>
+			<string>org.scratch.sb2</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>sb2</string>
+				</array>
+			</dict>
+		</dict>
+	</array>
 </dict>
 </plist>
